@@ -1,0 +1,24 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+               <th>courseId</th>
+               <th>courseName</th>
+               <th>courseDescription</th>
+               <th>noOfDays</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of courses">
+            <td>{{c.courseId}}</td>
+            <td>{{c.courseName}}</td>
+            <td>{{c.courseDescription}}</td>
+            <td>{{c.noOfDays}}</td>
+            <td> <button type="button" [routerLink]="['/course']" 
+                 (click)="addCourse()"   class="btn btn-primary btn-sm">
+                Add course</button></td>
+
+        </tr>
+</tbody>
+
+</table>
+
